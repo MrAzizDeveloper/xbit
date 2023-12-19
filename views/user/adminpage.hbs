@@ -1,0 +1,29 @@
+<main>
+  <p class="text-center"><a href="admin/users"  class=" text-center text-decoration-none text-white fs-4 " >Foydalanuvchilar</a></p>
+  <p class="text-center"><a href="admin/addchange"  class=" text-center text-decoration-none text-white fs-4 " >Almashinuv qo'shish</a></p>
+  <hr>
+    <h1 class="text-center text-white">Jo'natmalar</h1>
+    {{#if exchanges}}
+    {{#each exchanges}} 
+        <div class="card mx-4 m-2">
+          <div class="container my-3 mx-2">
+              <p class="text-bold " style="font-size: 30px;">id: {{id}}</p>
+            <h4><b>Ism: {{name}}</b></h4>
+            <p>Familiya: {{lastName}}</p>
+            <p>Telefon raqami: {{phone}}</p>
+            <p>So'ralgan summa: {{giveValue}}</p>
+            <p>Olinadigan summa: {{removeValue}}</p>
+            <p>Beriladigan summa kartasi: {{giveValueCard}}</p>
+            <p>Olinadigan summa kartasi: {{removeValueCard}}</p>
+            <hr>
+            <p>Jo'natilgan sana: {{createdAt}}</p>
+            <form action="/delete/{{id}}" method="post">
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+          </div>
+        </div>
+    {{/each}}
+    {{else}}
+      <p class="text-white">Buyurtmalarni barcha listi...</p>
+    {{/if}} 
+  </main>

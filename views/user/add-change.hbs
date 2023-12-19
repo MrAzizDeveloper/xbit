@@ -1,0 +1,46 @@
+<h1 class="text-center text-white">Almashinuv qo'shish</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 ">
+      <div class="card2  text-white ">
+        <div class="card-body">
+<form action="/admin/addchange/add" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="imageUrl" class="form-label">Image file:  </label>
+              <input class="form-control" type="file" name="imageUrl" id="imageUrl">
+            </div>
+            <div class="mb-3">
+              <label for="text" class="form-label">Ism va qiymatini qo'shish:  </label>
+              <input class="form-control" type="text" name="text" id="text">
+            </div>
+             <div class="mb-3">
+              <label for="text" class="form-label">Oluvchi valyutani qo'shish:  </label>
+              <input class="form-control" type="text2" name="text2" id="text2">
+            </div>
+            <button type="submit" class="btn btn-primary offset-5" style="width: 150px;">Jo'natish</button>
+ </form>      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <h1 class="text-center text-white">Almashinuvlar</h1>
+  {{#if change}}
+  {{#each change}}
+ <div class="card-box1">
+ <div class="card text-white" >
+          <div class="container my-auto mx-auto" >
+          <img src="{{imageUrl}}" width="200px" style="border-radius: 140px;" alt="rasm">
+          <p>{{text}}</p>
+          <p>Olish kursi narxi:</p>
+          <p>{{text2}}</p>
+          </div>
+          <a href="/admin/update/{{id}}"  type="button" class="btn btn-primary mx-auto m-3 d-flex">Update</a>
+          <form action="/admin/addchange/delete/{{id}}" method="post">
+              <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+  </div>
+  {{/each}}
+  {{else}}
+  <h1 class="text-center text-white">Almashinuvlarni barcha listi..</h1>
+  {{/if}}

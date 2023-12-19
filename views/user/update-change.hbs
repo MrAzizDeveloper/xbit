@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    
+      <div class="card my-auto mx-auto">
+        <div class="card-body">
+          <form action="{{id}}" method="post" enctype="application/x-www-form-urlencoded">
+            <div class="mb-3">
+              <label for="text" class="form-label">Sotish narxini o'zgartirish:</label>
+              <textarea class="form-control" style="width: 200px;" id="text" name="text" rows="4">{{change.text}}</textarea>
+            </div>
+            <div class="mb-3">
+              <label for="text" class="form-label">Olish narxini o'zgartirish:</label>
+              <textarea class="form-control" style="width: 200px;" id="text" name="text" rows="4">{{change.text2}}</textarea>
+            </div>
+            {{#if change.imageUrl}}
+              <img src="{{change.imageUrl}}" style="margin-left: 50px; border-radius:50%;" class="card-img-bottom " width="300px"   alt="...">
+            {{/if}}
+            <button type="submit" class="btn btn-primary mt-3">Update</button>
+          </form>
+        </div>
+    
+    </div>
+  </div>
+</div>

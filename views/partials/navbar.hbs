@@ -1,0 +1,49 @@
+<div class="container">
+  {{#if isAuthenticated}}
+<section class="top-nav">
+    <div>
+      
+      <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <img src="/img/photo_2023-11-19_06-32-33.jpg" width="40px" alt="xbitobmen">
+         XBITOBMEN. uz</h3>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu" >
+      <li><a href="/"  style="color: #fff; text-decoration:none; font-family: Verdana, Geneva, Tahoma, sans-serif;">Asosiy</a></li>
+      <li><a href="/change" style="color: #fff; text-decoration:none; font-family: Verdana, Geneva, Tahoma, sans-serif;">Almashinuvlar</a></li>
+      <li>
+        <img src="./img/moon.png" width="30px" id="icon">
+         <a href="/logout" class="text-danger ms-5" style="color: #fff;text-decoration:none; font-family: Verdana, Geneva, Tahoma, sans-serif; ">Chiqish</a>
+      </li>
+      
+    </ul>
+  </section>
+  {{else}}
+   <section class="top-nav">
+    <div>
+      <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <img src="/img/photo_2023-11-19_06-32-33.jpg" style="border-radius: 30px;" width="40px" alt="xbitobmen">
+        XBITOBMEN.uz</h3>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu" >
+      <li><a href="/"  style="color: #fff; text-decoration:none; font-family: Verdana, Geneva, Tahoma, sans-serif;">Asosiy</a></li>
+      <li><a href="/change" style="color: #fff; text-decoration:none; font-family: Verdana, Geneva, Tahoma, sans-serif;">Almashinuvlar</a></li>
+      <li>
+         <a href="/login" class="text-success " style="color: #fff;text-decoration:none; font-family: Verdana, Geneva, Tahoma, sans-serif; ">Kirish</a>
+      </li>
+      <li>
+        <a href="/register" class=" ms-1" style="color: #09c0fa;text-decoration:none; font-family: Verdana, Geneva, Tahoma, sans-serif; ">Ro'yxatdan o'tish</a>
+      </li>
+    </ul>
+        <img src="./img/moon.png" width="30px" id="icon">
+  </section>
+
+    {{/if}}
+  </div>

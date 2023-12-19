@@ -1,0 +1,26 @@
+ <h1 class="text-center" style="color: #fff;">KIRISH</h1> 
+ <div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <form action="/login" method="post" >
+        {{#if errorMessage }}
+        <div class="alert alert-danger" role="alert">
+          {{ errorMessage }}
+        </div>
+        {{/if}}
+        <div class="mb-3">
+          <label for="email" class="form-label" style="color: #fff;">Email pochta</label>
+          <input type="email" class="form-control"  name="email" id="email"
+            value="{{oldInput.email}}">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label " style="color: #fff; ">Password</label>
+          <input type="password" class="form-control"  name="password" id="password">
+        </div>
+        <input type="hidden" value="{{ csrfToken }}" name="_csrf">
+        <h4 class="text-center text-danger"><a href="/admin" style="color: red; text-decoration:none;">Admin uchun</a></h4>
+        <button type="submit" class="btn btn-primary offset-5">Kirish</button>
+      </form>
+    </div>
+  </div>
+</div>

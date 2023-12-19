@@ -1,0 +1,20 @@
+ <h1 class="text-center text-white">KIRISH (Admin uchun)</h1> 
+ <div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <form action="/admin" method="post" >
+        {{#if errorMessage }}
+        <div class="alert alert-danger" role="alert">
+          {{ errorMessage }}
+        </div>
+        {{/if}}
+        <div class="mb-3">
+          <label for="password" class="form-label text-white">Password</label>
+          <input type="password" class="form-control" name="password" id="password">
+        </div>
+        <input type="hidden" value="{{ csrfToken }}" name="_csrf">
+        <button type="submit" class="btn btn-primary">Kirish</button>
+      </form>
+    </div>
+  </div>
+</div>
